@@ -1,5 +1,5 @@
 # SimpleForNotes — Landing page
-
+🔗 Live Demo: https://landing-page-simple-for-notes.vercel.app
 Static marketing page for a notes app: plain **HTML**, **CSS**, and **JavaScript**—no build step, no bundler. Ideal for fast loads, simple hosting, and straightforward edits.
 
 ## Project structure
