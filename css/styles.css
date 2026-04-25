@@ -258,10 +258,10 @@ html[data-theme="light"] .theme-toggle-icon--sun {
     }
 }
 
-/* Seção Hero */
+/* Seção Hero (otimização conversão) */
 .hero {
     margin-top: 80px;
-    padding: 6.5rem 2rem 6rem;
+    padding: 6.75rem 2rem 6.25rem;
     background:
         radial-gradient(ellipse 80% 50% at 50% -20%, rgba(249, 115, 22, 0.18), transparent),
         linear-gradient(180deg, var(--bg-deep) 0%, var(--bg-elevated) 55%, var(--bg-deep) 100%);
@@ -279,7 +279,7 @@ html[data-theme="light"] .theme-toggle-icon--sun {
 }
 
 .hero-container {
-    max-width: 900px;
+    max-width: 920px;
     margin: 0 auto;
     position: relative;
     z-index: 1;
@@ -291,9 +291,9 @@ html[data-theme="light"] .theme-toggle-icon--sun {
     color: var(--accent);
     padding: 0.5rem 1.35rem;
     border-radius: 9999px;
-    font-size: 0.875rem;
+    font-size: 0.8125rem;
     font-weight: 600;
-    margin-bottom: 1.75rem;
+    margin-bottom: 1.5rem;
     border: 1px solid rgba(249, 115, 22, 0.35);
     box-shadow: 0 0 24px rgba(249, 115, 22, 0.08);
     transition: border-color var(--transition-fast), box-shadow var(--transition-fast), transform var(--transition-fast);
@@ -306,31 +306,83 @@ html[data-theme="light"] .theme-toggle-icon--sun {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: clamp(2rem, 4.2vw + 1rem, 3.35rem);
     font-weight: 800;
-    line-height: 1.15;
-    margin-bottom: 1.5rem;
-    color: var(--text);
-    word-spacing: 0.08em;
-    letter-spacing: -0.02em;
-}
-
-.hero p {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    margin-bottom: 2.25rem;
-    max-width: 640px;
+    line-height: 1.12;
+    margin-bottom: 1.25rem;
     margin-left: auto;
     margin-right: auto;
-    line-height: 1.65;
+    max-width: 22ch;
+    color: var(--text);
+    word-spacing: 0.04em;
+    letter-spacing: -0.03em;
+    text-wrap: balance;
+    text-shadow: 0 2px 32px rgba(0, 0, 0, 0.45);
+}
+
+html[data-theme="light"] .hero h1 {
+    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+.hero .hero-lead {
+    font-size: 1.1875rem;
+    color: var(--text-secondary);
+    margin: 0 auto 2rem;
+    max-width: 38rem;
+    line-height: 1.6;
+}
+
+.hero-cta-stack {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3.5rem;
 }
 
 .hero-cta-group {
     display: flex;
     gap: 1rem;
     justify-content: center;
-    margin-bottom: 3.25rem;
     flex-wrap: wrap;
+}
+
+.hero-proof {
+    margin: 0;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.hero .btn-primary {
+    font-size: 1.0625rem;
+    padding: 1.1rem 2.6rem;
+    background: linear-gradient(135deg, #FF8A3D 0%, var(--primary) 35%, #EA580C 100%);
+    box-shadow:
+        0 6px 28px rgba(249, 115, 22, 0.5),
+        0 0 0 1px rgba(255, 200, 150, 0.35),
+        0 0 72px -12px rgba(249, 115, 22, 0.35);
+}
+
+.hero .btn-primary:hover {
+    transform: scale(1.06);
+    box-shadow:
+        0 10px 40px rgba(249, 115, 22, 0.55),
+        0 0 0 1px rgba(255, 220, 180, 0.45),
+        0 0 88px -8px rgba(251, 146, 60, 0.4);
+    filter: brightness(1.08);
+}
+
+.hero .btn-primary:active {
+    transform: scale(1.03);
+}
+
+.hero .btn-secondary {
+    font-size: 0.9375rem;
+    padding: 0.95rem 1.75rem;
+    opacity: 0.95;
 }
 
 .btn {
@@ -386,20 +438,23 @@ html[data-theme="light"] .theme-toggle-icon--sun {
 }
 
 .hero-image {
-    margin-top: 3.25rem;
+    margin-top: 3.5rem;
     position: relative;
+    max-width: min(100%, 880px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .hero-image::after {
     content: '';
     position: absolute;
     left: 50%;
-    bottom: -12%;
+    bottom: -14%;
     transform: translateX(-50%);
-    width: 70%;
-    height: 40%;
-    background: radial-gradient(ellipse, rgba(249, 115, 22, 0.22) 0%, transparent 70%);
-    filter: blur(24px);
+    width: 82%;
+    height: 42%;
+    background: radial-gradient(ellipse, rgba(249, 115, 22, 0.32) 0%, rgba(249, 115, 22, 0.08) 45%, transparent 72%);
+    filter: blur(28px);
     pointer-events: none;
     z-index: 0;
 }
@@ -410,22 +465,36 @@ html[data-theme="light"] .theme-toggle-icon--sun {
     padding: 0;
     max-height: 500px;
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: block;
     color: var(--text);
     font-size: 1.125rem;
-    box-shadow: var(--shadow-xl), 0 0 0 1px rgba(249, 115, 22, 0.15);
-    border: 1px solid rgba(249, 115, 22, 0.25);
+    box-shadow:
+        var(--shadow-xl),
+        0 0 0 1px rgba(249, 115, 22, 0.28),
+        0 24px 64px -12px rgba(0, 0, 0, 0.55),
+        0 0 80px -20px rgba(249, 115, 22, 0.25);
+    border: 1px solid rgba(251, 146, 60, 0.35);
     position: relative;
     z-index: 1;
     transition: box-shadow var(--transition-smooth), border-color var(--transition-smooth), transform var(--transition-smooth);
+    overflow: hidden;
+}
+
+.hero img.hero-image-placeholder {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    vertical-align: middle;
 }
 
 .hero-image:hover .hero-image-placeholder {
-    box-shadow: var(--shadow-xl), 0 0 48px rgba(249, 115, 22, 0.2);
-    border-color: rgba(251, 146, 60, 0.4);
-    transform: translateY(-2px);
+    box-shadow:
+        var(--shadow-xl),
+        0 0 0 1px rgba(251, 146, 60, 0.5),
+        0 32px 72px -10px rgba(0, 0, 0, 0.5),
+        0 0 96px -16px rgba(249, 115, 22, 0.35);
+    border-color: rgba(251, 146, 60, 0.55);
+    transform: translateY(-5px) scale(1.015);
 }
 
 @media (max-width: 768px) {
@@ -437,12 +506,16 @@ html[data-theme="light"] .theme-toggle-icon--sun {
         font-size: 2.25rem;
     }
 
-    .hero p {
-        font-size: 1.125rem;
+    .hero .hero-lead {
+        font-size: 1.0625rem;
     }
 
     .hero-cta-group {
         flex-direction: column;
+    }
+
+    .hero-cta-stack {
+        margin-bottom: 3rem;
     }
 
     .btn {
@@ -1001,7 +1074,8 @@ a[href^="#"] {
 
 @media (max-width: 480px) {
     .hero h1 {
-        font-size: 1.875rem;
+        font-size: clamp(1.65rem, 6.5vw, 2rem);
+        max-width: 100%;
     }
 
     .section-header h2 {
