@@ -1,27 +1,29 @@
-# SimpleForNotes — landing page
+# SimpleForNotes — Landing page
 
-Landing estática pra app de notas: HTML + CSS + JS puro, sem build.
+Static marketing page for a notes app: plain **HTML**, **CSS**, and **JavaScript**—no build step, no bundler. Ideal for fast loads, simple hosting, and straightforward edits.
 
-## Pastas
+## Project structure
 
-- `index.html` — página
-- `css/styles.css` — estilo (tema escuro/claro, cores, layout)
-- `js/script.js` — scroll suave, tema, animações leves
-- `assets/` — imagens e mídia
+- `index.html` — Page structure, copy, and navigation links
+- `css/styles.css` — Visual design: dark/light theme, color tokens, layout
+- `js/script.js` — Smooth scrolling, theme toggle, light scroll animations
+- `assets/` — Images and other media
 
-## Como ver
+## Running locally
 
-Abre o `index.html` no navegador ou sobe um servidor rápido:
+Open `index.html` in your browser, or start a quick static server:
 
 ```bash
 npx http-server
-# ou: python -m http.server 8000
+# or: python -m http.server 8000
 ```
 
-## O que mudar
+For a one-command option from this repo, use **`npm start`** (runs `python -m http.server 8000` per `package.json`).
 
-- **Textos / links:** `index.html`
-- **Visual / tema:** `css/styles.css` (variáveis no `:root` e `html[data-theme="light"]`)
-- **Comportamento:** `js/script.js`
+## Customization
 
-Tem botão de **tema claro/escuro** na nav; a escolha fica salva no `localStorage`.
+- **Copy & links:** `index.html`
+- **Visuals & theme:** `css/styles.css` (variables in `:root` and `html[data-theme="light"]`)
+- **Behavior:** `js/script.js`
+
+The nav includes a **light/dark theme** toggle; the selected theme is saved in **`localStorage`**.
