@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-br" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SimpleForNotes - Suas Ideias, Perfeitamente Organizadas</title>
+    <script>
+        (function () {
+            try {
+                if (localStorage.getItem('simplefornotes-theme') === 'light') {
+                    document.documentElement.setAttribute('data-theme', 'light');
+                }
+            } catch (e) { /* ignore */ }
+        })();
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="nav-brand">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm3.5-9c.83 0 1.5-.67 1.5-1.5S16.33 8 15.5 8 14 8.67 14 9.5s.67 1.5 1.5 1.5zm-7 0c.83 0 1.5-.67 1.5-1.5S9.33 8 8.5 8 7 8.67 7 9.5 7.67 11 8.5 11zm3.5 6.5c2.33 0 4.31-1.46 5.11-3.5H6.89c.8 2.04 2.78 3.5 5.11 3.5z"></path>
+                </svg>
+                SimpleForNotes
+            </a>
+            <div class="nav-actions">
+                <ul class="nav-links">
+                    <li><a href="#features">Recursos</a></li>
+                    <li><a href="#how">Como Funciona</a></li>
+                    <li><a href="#testimonials">Depoimentos</a></li>
+                    <li><a href="#cta" class="nav-cta">Começar</a></li>
+                </ul>
+                <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Alternar tema claro" aria-pressed="false" title="Tema claro">
+                    <span class="theme-toggle-icon theme-toggle-icon--sun" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"></path></svg>
+                    </span>
+                    <span class="theme-toggle-icon theme-toggle-icon--moon" aria-hidden="true">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                    </span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container fade-in-up">
+            <div class="hero-badge">🚀 Agora disponível na web e mobile</div>
+            <h1>Suas Ideias, Perfeitamente Organizadas</h1>
+            <p>Capture, organize e compartilhe seus pensamentos com o aplicativo de anotações mais intuitivo. Trabalhe mais rápido, lembre-se de mais e colabore perfeitamente.</p>
+            <div class="hero-cta-group">
+                <button class="btn btn-primary">Comece o Teste Gratuito</button>
+                <button class="btn btn-secondary">Ver Demo</button>
+            </div>
+            <div class="hero-image">
+                <img src="assets/images/app-mockup.png" 
+                     alt="Interface do SimpleForNotes - Aplicativo de Anotações" 
+                     class="hero-image-placeholder"
+                     style="max-width: 100%; height: auto; object-fit: cover;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Tudo que Você Precisa</h2>
+                <p>Recursos poderosos projetados para tornar as anotações effortless e produtivas</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"></path>
+                        </svg>
+                    </div>
+                    <h3>Organização Inteligente</h3>
+                    <p>Categorize e marque automaticamente suas anotações com sugestões alimentadas por IA. Encontre o que precisa em segundos com busca inteligente.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                        </svg>
+                    </div>
+                    <h3>Colaboração em Tempo Real</h3>
+                    <p>Compartilhe anotações e colabore com sua equipe em tempo real. Veja as mudanças instantaneamente e trabalhe junto de forma mais eficaz do que nunca.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="9" y1="9" x2="15" y2="9"></line>
+                            <line x1="9" y1="15" x2="15" y2="15"></line>
+                        </svg>
+                    </div>
+                    <h3>Suporte a Mídia Rica</h3>
+                    <p>Incorpore imagens, vídeos e arquivos diretamente em suas anotações. Crie documentação bonita e rica em multimídia que conta a história completa.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="1"></circle>
+                            <path d="M12 1v6m0 6v6"></path>
+                            <path d="M4.22 4.22l4.24 4.24m5.08 0l4.24-4.24"></path>
+                            <path d="M1 12h6m6 0h6"></path>
+                            <path d="M4.22 19.78l4.24-4.24m5.08 0l4.24 4.24"></path>
+                            <path d="M19.78 4.22l-4.24 4.24m0 5.08l4.24 4.24"></path>
+                        </svg>
+                    </div>
+                    <h3>Sincronize em Qualquer Lugar</h3>
+                    <p>Suas anotações sincronizam instantaneamente em todos os dispositivos. Comece no desktop, continue no mobile—seus dados estão sempre disponíveis, sempre sincronizados.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section class="how-it-works" id="how">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Como Funciona</h2>
+                <p>Comece em minutos com nosso simples processo de três etapas</p>
+            </div>
+            <div class="steps-container">
+                <div class="step fade-in-up">
+                    <div class="step-number">1</div>
+                    <h3>Cadastre-se em Segundos</h3>
+                    <p>Crie sua conta com apenas seu email. Nenhum cartão de crédito necessário. Comece seu teste gratuito de 30 dias imediatamente e explore todos os recursos premium.</p>
+                </div>
+                <div class="step fade-in-up">
+                    <div class="step-number">2</div>
+                    <h3>Crie e Organize</h3>
+                    <p>Comece a fazer anotações, criar cadernos e organizar seus pensamentos. Use tags, pastas e sugestões de IA para manter tudo estruturado.</p>
+                </div>
+                <div class="step fade-in-up">
+                    <div class="step-number">3</div>
+                    <h3>Compartilhe e Colabore</h3>
+                    <p>Convide membros da equipe para colaborar em tempo real. Compartilhe cadernos ou anotações específicas com permissões personalizadas e acompanhe todas as mudanças.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Preview Section -->
+    <section class="product-preview" id="preview">
+        <div class="preview-container">
+            <div class="preview-content">
+                <h2>Lindamente Projetado para Produtividade</h2>
+                <p>Experimente um aplicativo de anotações que não é apenas poderoso, mas um prazer de usar. Cada pixel é criado para mantê-lo focado no que importa—suas ideias.</p>
+                <ul class="preview-features">
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Interface de edição sem distrações
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Temas e layouts personalizáveis
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Atalhos de teclado para usuários avançados
+                    </li>
+                    <li>
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        Modo escuro para trabalho confortável à noite
+                    </li>
+                </ul>
+                <button class="btn btn-primary">Explorar Recursos</button>
+            </div>
+            <div class="mockup-container">
+                <div class="mockup">
+                    📱 App Mobile
+                </div>
+                <div class="mockup mockup-desktop">
+                    💻 App Desktop
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="section-container">
+            <div class="section-header">
+                <h2>Adorado por Milhares</h2>
+                <p>Veja o que nossos usuários têm a dizer sobre NoteMaster</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"NoteMaster mudou completamente a forma como organizo meus pensamentos. As sugestões de IA são incrivelmente inteligentes, e a interface é tão intuitiva. Não consigo imaginar trabalhando sem isso agora."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">SJ</div>
+                        <div class="author-info">
+                            <h4>Ze Ninguem</h4>
+                            <p>Chapeiro Senior, Restaurante do Ze</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"Finalmente, um aplicativo de anotações que acompanha meu fluxo de trabalho. Os recursos de colaboração são incomparáveis, e a produtividade da minha equipe aumentou dramaticamente."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MC</div>
+                        <div class="author-info">
+                            <h4>John Doe</h4>
+                            <p>Fundador, StartupXYZ</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card fade-in-up">
+                    <div class="stars">
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                        <span class="star">★</span>
+                    </div>
+                    <p class="testimonial-text">"A sincronização entre dispositivos é perfeita, e amo como posso começar no meu telefone e continuar no meu desktop sem perder nenhum detalhe. Melhor investimento em ferramentas de produtividade."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">EM</div>
+                        <div class="author-info">
+                            <h4>Rogerio Ceni</h4>
+                            <p>Melhor goleiro de todos os tempos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section class="final-cta" id="cta">
+        <div class="final-cta-container">
+            <h2>Pronto para Transformar Suas Anotações?</h2>
+            <p>Junte-se a milhares de profissionais que já estão usando NoteMaster para trabalhar de forma mais inteligente, não mais difícil. Comece seu teste gratuito de 30 dias hoje.</p>
+            <button class="btn">Começar Gratuitamente →</button>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h4>Produto</h4>
+                    <a href="#features">Recursos</a>
+                    <a href="#pricing">Preços</a>
+                    <a href="#security">Segurança</a>
+                    <a href="#roadmap">Roteiro</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Empresa</h4>
+                    <a href="#about">Sobre</a>
+                    <a href="#blog">Blog</a>
+                    <a href="#careers">Carreiras</a>
+                    <a href="#press">Imprensa</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Recursos</h4>
+                    <a href="#guides">Guias</a>
+                    <a href="#help">Central de Ajuda</a>
+                    <a href="#contact">Contato</a>
+                    <a href="#community">Comunidade</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#privacy">Política de Privacidade</a>
+                    <a href="#terms">Termos de Serviço</a>
+                    <a href="#cookies">Política de Cookies</a>
+                    <a href="#compliance">Conformidade</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SimpleForNotes. Todos os direitos nao reservados. | Feito por teusteudev s2.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

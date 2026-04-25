@@ -1,0 +1,23 @@
+{
+  "name": "notemaster-landing",
+  "version": "1.0.0",
+  "description": "Landing page moderna e responsiva para o aplicativo de anotações NoteMaster",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "build": "echo 'Build script pode ser adicionado aqui'",
+    "lint": "echo 'Linting pode ser adicionado aqui'",
+    "minify": "echo 'Minificação pode ser adicionada aqui'"
+  },
+  "keywords": [
+    "landing-page",
+    "saas",
+    "note-taking",
+    "web-design",
+    "responsive"
+  ],
+  "author": "NoteMaster Team",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}

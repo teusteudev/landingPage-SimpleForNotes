@@ -1,0 +1,67 @@
+{
+  "testimonials": [
+    {
+      "id": 1,
+      "name": "Sarah Johnson",
+      "title": "Gerente de Produto, TechCorp",
+      "avatar": "SJ",
+      "rating": 5,
+      "text": "NoteMaster mudou completamente a forma como organizo meus pensamentos. As sugestões de IA são incrivelmente inteligentes, e a interface é tão intuitiva. Não consigo imaginar trabalhando sem isso agora."
+    },
+    {
+      "id": 2,
+      "name": "Michael Chen",
+      "title": "Fundador, StartupXYZ",
+      "avatar": "MC",
+      "rating": 5,
+      "text": "Finalmente, um aplicativo de anotações que acompanha meu fluxo de trabalho. Os recursos de colaboração são incomparáveis, e a produtividade da minha equipe aumentou dramaticamente."
+    },
+    {
+      "id": 3,
+      "name": "Emily Martinez",
+      "title": "Designer e Pesquisadora",
+      "avatar": "EM",
+      "rating": 5,
+      "text": "A sincronização entre dispositivos é perfeita, e amo como posso começar no meu telefone e continuar no meu desktop sem perder nenhum detalhe. Melhor investimento em ferramentas de produtividade."
+    }
+  ],
+  "features": [
+    {
+      "id": 1,
+      "title": "Organização Inteligente",
+      "description": "Categorize e marque automaticamente suas anotações com sugestões alimentadas por IA."
+    },
+    {
+      "id": 2,
+      "title": "Colaboração em Tempo Real",
+      "description": "Compartilhe anotações e colabore com sua equipe em tempo real."
+    },
+    {
+      "id": 3,
+      "title": "Suporte a Mídia Rica",
+      "description": "Incorpore imagens, vídeos e arquivos diretamente em suas anotações."
+    },
+    {
+      "id": 4,
+      "title": "Sincronize em Qualquer Lugar",
+      "description": "Suas anotações sincronizam instantaneamente em todos os dispositivos."
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "title": "Cadastre-se em Segundos",
+      "description": "Crie sua conta com apenas seu email. Nenhum cartão de crédito necessário."
+    },
+    {
+      "id": 2,
+      "title": "Crie e Organize",
+      "description": "Comece a fazer anotações e organizar seus pensamentos com sugestões de IA."
+    },
+    {
+      "id": 3,
+      "title": "Compartilhe e Colabore",
+      "description": "Convide membros da equipe para colaborar em tempo real com permissões customizadas."
+    }
+  ]
+}
