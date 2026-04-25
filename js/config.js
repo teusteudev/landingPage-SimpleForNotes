@@ -1,10 +1,9 @@
 /**
- * NoteMaster Landing Page - Configurações e Constantes
- * Arquivo de referência para variáveis e configurações do projeto
+ * SimpleForNotes landing page — settings and constants
  */
 
 // ==========================================
-// Configurações de Cores
+// Colors
 // ==========================================
 const COLORS = {
     primary: '#3B82F6',
@@ -21,7 +20,7 @@ const COLORS = {
 };
 
 // ==========================================
-// Configurações de Sombras
+// Shadows
 // ==========================================
 const SHADOWS = {
     sm: '0 1px 2px 0 rgba(0, 0, 0, 0.05)',
@@ -31,7 +30,7 @@ const SHADOWS = {
 };
 
 // ==========================================
-// URLs e Endpoints
+// URLs and endpoints
 // ==========================================
 const URLS = {
     homepage: '/',
@@ -47,42 +46,42 @@ const URLS = {
 };
 
 // ==========================================
-// Textos Estáticos
+// Static copy (reference)
 // ==========================================
 const TEXTS = {
-    appName: 'NoteMaster',
-    tagline: 'Suas Ideias, Perfeitamente Organizadas',
-    description: 'Capture, organize e compartilhe seus pensamentos com o aplicativo de anotações mais intuitivo.',
+    appName: 'SimpleForNotes',
+    tagline: 'Capture ideas. Find them fast.',
+    description: 'The notes workspace for teams that want speed, clarity, and sync that simply works.',
     
     sections: {
-        features: 'Recursos',
-        howItWorks: 'Como Funciona',
-        testimonials: 'Depoimentos',
-        pricing: 'Preços',
+        features: 'Features',
+        howItWorks: 'How it works',
+        testimonials: 'Testimonials',
+        pricing: 'Pricing',
     },
     
     buttons: {
-        startTrial: 'Comece o Teste Gratuito',
-        viewDemo: 'Ver Demo',
-        learnMore: 'Saiba Mais',
-        exploreFeatures: 'Explorar Recursos',
-        getStarted: 'Começar Gratuitamente →',
+        startTrial: 'Start free trial',
+        viewDemo: 'Watch the 2-minute tour',
+        learnMore: 'Learn more',
+        exploreFeatures: 'See all features',
+        getStarted: 'Start your free trial →',
     },
 };
 
 // ==========================================
-// Breakpoints (Responsive Design)
+// Breakpoints
 // ==========================================
 const BREAKPOINTS = {
-    xs: 480,      // Extra pequeno
-    sm: 768,      // Pequeno
-    md: 1024,     // Médio
-    lg: 1200,     // Grande
-    xl: 1440,     // Extra grande
+    xs: 480,
+    sm: 768,
+    md: 1024,
+    lg: 1200,
+    xl: 1440,
 };
 
 // ==========================================
-// Timings (Animações)
+// Animation timings
 // ==========================================
 const TIMINGS = {
     instant: 0,
@@ -94,110 +93,101 @@ const TIMINGS = {
 };
 
 // ==========================================
-// Dados dos Usuários (Para Testimonials)
+// Testimonials (reference data)
 // ==========================================
 const TESTIMONIALS = [
     {
         id: 1,
         name: 'Sarah Johnson',
-        title: 'Gerente de Produto, TechCorp',
+        title: 'Product Manager, TechCorp',
         avatar: 'SJ',
         rating: 5,
-        text: 'NoteMaster mudou completamente a forma como organizo meus pensamentos. As sugestões de IA são incrivelmente inteligentes, e a interface é tão intuitiva. Não consigo imaginar trabalhando sem isso agora.',
+        text: 'The suggestions actually save me time—not a gimmick. I pull up old decisions in seconds, and the UI never gets in my head. I wouldn\'t go back to my old stack.',
         color: 'from-blue-500 to-purple-500',
     },
     {
         id: 2,
         name: 'Michael Chen',
-        title: 'Fundador, StartupXYZ',
+        title: 'Founder, StartupXYZ',
         avatar: 'MC',
         rating: 5,
-        text: 'Finalmente, um aplicativo de anotações que acompanha meu fluxo de trabalho. Os recursos de colaboração são incomparáveis, e a produtividade da minha equipe aumentou dramaticamente.',
+        text: 'We stopped losing context between chat and docs. One shared space, edits in real time, and we shipped our biggest release without the usual scramble.',
         color: 'from-purple-500 to-pink-500',
     },
     {
         id: 3,
         name: 'Emily Martinez',
-        title: 'Designer e Pesquisadora',
+        title: 'Designer & Researcher',
         avatar: 'EM',
         rating: 5,
-        text: 'A sincronização entre dispositivos é perfeita, e amo como posso começar no meu telefone e continuar no meu desktop sem perder nenhum detalhe. Melhor investimento em ferramentas de produtividade.',
+        text: 'I draft on my commute and polish at my desk. Sync has been rock-solid—it feels like one device, not three. Best money we spent on tooling this year.',
         color: 'from-green-500 to-blue-500',
     },
 ];
 
 // ==========================================
-// Dados dos Recursos (Features)
+// Features (reference data)
 // ==========================================
 const FEATURES = [
     {
         id: 1,
-        title: 'Organização Inteligente',
-        description: 'Categorize e marque automaticamente suas anotações com sugestões alimentadas por IA. Encontre o que precisa em segundos com busca inteligente.',
+        title: 'Smart organization',
+        description: 'Tags and suggestions that adapt to how you work, so the note you need shows up when you need it—not after a dozen searches.',
         icon: 'icon-organizer',
     },
     {
         id: 2,
-        title: 'Colaboração em Tempo Real',
-        description: 'Compartilhe anotações e colabore com sua equipe em tempo real. Veja as mudanças instantaneamente e trabalhe junto de forma mais eficaz do que nunca.',
+        title: 'Real-time collaboration',
+        description: 'Co-edit with your team, see changes as they land, and decide in the doc—less time in status meetings, more time shipping.',
         icon: 'icon-collaboration',
     },
     {
         id: 3,
-        title: 'Suporte a Mídia Rica',
-        description: 'Incorpore imagens, vídeos e arquivos diretamente em suas anotações. Crie documentação bonita e rica em multimídia que conta a história completa.',
+        title: 'Rich media support',
+        description: 'Drop in images, video, and files next to your ideas—the full story stays on one page, not scattered across threads.',
         icon: 'icon-media',
     },
     {
         id: 4,
-        title: 'Sincronize em Qualquer Lugar',
-        description: 'Suas anotações sincronizam instantaneamente em todos os dispositivos. Comece no desktop, continue no mobile—seus dados estão sempre disponíveis, sempre sincronizados.',
+        title: 'Sync everywhere',
+        description: 'Start on your phone, finish on your laptop. Edits save automatically—one workspace that feels like a single device.',
         icon: 'icon-sync',
     },
 ];
 
 // ==========================================
-// Dados dos Passos (How It Works)
+// How it works steps (reference data)
 // ==========================================
 const STEPS = [
     {
         id: 1,
-        title: 'Cadastre-se em Segundos',
-        description: 'Crie sua conta com apenas seu email. Nenhum cartão de crédito necessário. Comece seu teste gratuito de 30 dias imediatamente e explore todos os recursos premium.',
+        title: 'Sign up in seconds',
+        description: 'Use your work email and you\'re in. No credit card to start—your 30-day trial includes every premium feature from day one.',
     },
     {
         id: 2,
-        title: 'Crie e Organize',
-        description: 'Comece a fazer anotações, criar cadernos e organizar seus pensamentos. Use tags, pastas e sugestões de IA para manter tudo estruturado.',
+        title: 'Capture & organize',
+        description: 'Dump ideas fast, then shape them into notebooks and tags. Smart suggestions keep structure without babysitting folders.',
     },
     {
         id: 3,
-        title: 'Compartilhe e Colabore',
-        description: 'Convide membros da equipe para colaborar em tempo real. Compartilhe cadernos ou anotações específicas com permissões personalizadas e acompanhe todas as mudanças.',
+        title: 'Share & collaborate',
+        description: 'Invite teammates, set permissions on notebooks or single notes, and watch edits roll in live—everyone on the same version, by default.',
     },
 ];
 
 // ==========================================
-// Funções Utilitárias
+// Utilities
 // ==========================================
 
-/**
- * Detectar se está em modo dark
- */
 function isDarkMode() {
     return window.matchMedia('(prefers-color-scheme: dark)').matches;
 }
 
-/**
- * Detectar se está em dispositivo mobile
- */
 function isMobileDevice() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
-/**
- * Detectar breakpoint atual
- */
 function getCurrentBreakpoint() {
     const width = window.innerWidth;
     if (width < BREAKPOINTS.xs) return 'xs';
@@ -207,19 +197,13 @@ function getCurrentBreakpoint() {
     return 'xl';
 }
 
-/**
- * Formatar preço em moeda
- */
-function formatPrice(price, currency = 'BRL') {
-    return new Intl.NumberFormat('pt-BR', {
+function formatPrice(price, currency = 'USD') {
+    return new Intl.NumberFormat('en-US', {
         style: 'currency',
         currency: currency,
     }).format(price);
 }
 
-/**
- * Debounce function
- */
 function debounce(func, wait) {
     let timeout;
     return function executedFunction(...args) {
@@ -232,11 +216,8 @@ function debounce(func, wait) {
     };
 }
 
-// ==========================================
-// Logs de Informações
-// ==========================================
-console.log('%c🚀 NoteMaster Landing Page', 'color: #3B82F6; font-size: 16px; font-weight: bold;');
-console.log('Configurações carregadas com sucesso ✅');
-console.log('Versão: 1.0.0');
-console.log('Modo Mobile:', isMobileDevice());
-console.log('Breakpoint Atual:', getCurrentBreakpoint());
+console.log('%c🚀 SimpleForNotes landing page', 'color: #3B82F6; font-size: 16px; font-weight: bold;');
+console.log('Config loaded');
+console.log('Version: 1.0.0');
+console.log('Mobile:', isMobileDevice());
+console.log('Breakpoint:', getCurrentBreakpoint());

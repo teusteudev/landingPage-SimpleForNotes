@@ -1,13 +1,13 @@
 {
-  "name": "notemaster-landing",
+  "name": "simplefornotes-landing",
   "version": "1.0.0",
-  "description": "Landing page moderna e responsiva para o aplicativo de anotações NoteMaster",
+  "description": "Modern, responsive landing page for the SimpleForNotes notes app",
   "main": "index.html",
   "scripts": {
     "start": "python -m http.server 8000",
-    "build": "echo 'Build script pode ser adicionado aqui'",
-    "lint": "echo 'Linting pode ser adicionado aqui'",
-    "minify": "echo 'Minificação pode ser adicionada aqui'"
+    "build": "echo 'Add build script here'",
+    "lint": "echo 'Add linting here'",
+    "minify": "echo 'Add minification here'"
   },
   "keywords": [
     "landing-page",
@@ -16,7 +16,7 @@
     "web-design",
     "responsive"
   ],
-  "author": "NoteMaster Team",
+  "author": "SimpleForNotes",
   "license": "MIT",
   "devDependencies": {},
   "dependencies": {}

@@ -1,10 +1,9 @@
 /**
- * SimpleForNotes Landing Page - JavaScript
- * Responsável por interatividade e animações
+ * SimpleForNotes landing page — interactivity and animations
  */
 
 // ==========================================
-// Tema (escuro padrão, claro opcional)
+// Theme (dark default, optional light)
 // ==========================================
 const THEME_STORAGE_KEY = 'simplefornotes-theme';
 
@@ -28,8 +27,8 @@ function updateThemeToggleUI() {
     if (!btn) return;
     const isLight = getTheme() === 'light';
     btn.setAttribute('aria-pressed', isLight ? 'true' : 'false');
-    btn.setAttribute('aria-label', isLight ? 'Alternar para tema escuro' : 'Alternar para tema claro');
-    btn.title = isLight ? 'Tema escuro' : 'Tema claro';
+    btn.setAttribute('aria-label', isLight ? 'Switch to dark theme' : 'Switch to light theme');
+    btn.title = isLight ? 'Dark theme' : 'Light theme';
 }
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -43,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // ==========================================
-// Scroll Suave para Âncoras
+// Smooth scroll for in-page anchors
 // ==========================================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
@@ -59,7 +58,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ==========================================
-// Animação ao Scroll - Intersection Observer
+// Scroll animation — Intersection Observer
 // ==========================================
 const observerOptions = {
     threshold: 0.1,
@@ -75,24 +74,21 @@ const observer = new IntersectionObserver(function(entries) {
     });
 }, observerOptions);
 
-// Aplicar observador aos elementos que devem animar
 document.querySelectorAll('.feature-card, .testimonial-card, .step').forEach(el => {
     observer.observe(el);
 });
 
 // ==========================================
-// Interação de Botões
+// Button interactions
 // ==========================================
 document.querySelectorAll('.btn').forEach(btn => {
     btn.addEventListener('click', function() {
-        console.log('Botão clicado:', this.textContent);
-        // Aqui você pode adicionar lógica adicional
-        // como redirecionamento, tracking, etc.
+        console.log('Button clicked:', this.textContent);
     });
 });
 
 // ==========================================
-// Navbar - Efeito ao Scroll
+// Navbar scroll effect
 // ==========================================
 let lastScrollTop = 0;
 const navbar = document.querySelector('nav');
@@ -104,50 +100,41 @@ window.addEventListener('scroll', function () {
 });
 
 // ==========================================
-// Função auxiliar para rastrear cliques
+// Click tracking helper
 // ==========================================
 function trackClick(eventName, details = {}) {
-    console.log(`Evento: ${eventName}`, details);
-    // Integrar com Google Analytics, Mixpanel, etc.
-    // if (window.gtag) {
-    //     gtag('event', eventName, details);
-    // }
+    console.log(`Event: ${eventName}`, details);
 }
 
 // ==========================================
-// CTA Buttons - Adicionar Event Listeners
+// CTA buttons
 // ==========================================
 const ctaButtons = {
     startTrial: document.querySelector('.btn-primary'),
     viewDemo: document.querySelector('.btn-secondary'),
     exploreFeaturesBtn: Array.from(document.querySelectorAll('.btn')).find(btn => 
-        btn.textContent.includes('Explorar Recursos')
+        btn.textContent.includes('See all features')
     ),
     finalCta: Array.from(document.querySelectorAll('.btn')).find(btn => 
-        btn.textContent.includes('Começar Gratuitamente')
+        btn.textContent.includes('Start your free trial')
     )
 };
 
 if (ctaButtons.startTrial) {
     ctaButtons.startTrial.addEventListener('click', function() {
         trackClick('start_trial_clicked');
-        // Redirecionar para página de signup
-        // window.location.href = '/signup';
     });
 }
 
 if (ctaButtons.viewDemo) {
     ctaButtons.viewDemo.addEventListener('click', function() {
         trackClick('view_demo_clicked');
-        // Abrir modal de demo ou redirecionar
-        // openDemoModal();
     });
 }
 
 if (ctaButtons.exploreFeaturesBtn) {
     ctaButtons.exploreFeaturesBtn.addEventListener('click', function() {
         trackClick('explore_features_clicked');
-        // Scroll para seção de recursos
         document.querySelector('#features')?.scrollIntoView({ behavior: 'smooth' });
     });
 }
@@ -155,13 +142,11 @@ if (ctaButtons.exploreFeaturesBtn) {
 if (ctaButtons.finalCta) {
     ctaButtons.finalCta.addEventListener('click', function() {
         trackClick('final_cta_clicked');
-        // Redirecionar para página de signup
-        // window.location.href = '/signup';
     });
 }
 
 // ==========================================
-// Carousel para Mobile (Opcional)
+// Optional mobile carousel
 // ==========================================
 function initCarousel() {
     const testimonials = document.querySelectorAll('.testimonial-card');
@@ -170,21 +155,16 @@ function initCarousel() {
     
     let currentIndex = 0;
     
-    // Apenas em mobile
     if (window.innerWidth < 768) {
-        // Implementar lógica de carousel se necessário
-        console.log('Carousel em mobile seria implementado aqui');
+        console.log('Mobile carousel would be implemented here');
     }
 }
 
-// Inicializar carousel ao carregar
 document.addEventListener('DOMContentLoaded', initCarousel);
-
-// Reinicializar ao redimensionar
 window.addEventListener('resize', initCarousel);
 
 // ==========================================
-// Performance: Lazy Loading (Opcional)
+// Optional lazy loading for images
 // ==========================================
 if ('IntersectionObserver' in window) {
     const imageObserver = new IntersectionObserver((entries, observer) => {
@@ -198,26 +178,19 @@ if ('IntersectionObserver' in window) {
         });
     });
     
-    // Aplicar a elementos com data-src
     document.querySelectorAll('img[data-src]').forEach(img => 
         imageObserver.observe(img)
     );
 }
 
 // ==========================================
-// Utilidades
+// Utilities
 // ==========================================
 
-/**
- * Detectar se o usuário está em dispositivo mobile
- */
 function isMobile() {
     return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
 }
 
-/**
- * Adicionar classe ativa ao link de navegação ao scroll
- */
 function updateActiveNavLink() {
     const sections = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-links a');
@@ -243,18 +216,11 @@ function updateActiveNavLink() {
     });
 }
 
-// Inicializar atualização de nav links
 document.addEventListener('DOMContentLoaded', updateActiveNavLink);
 
-// ==========================================
-// Form Validation (Opcional para formulários futuros)
-// ==========================================
 function validateEmail(email) {
     const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     return re.test(email);
 }
 
-// ==========================================
-// Log de Carregamento
-// ==========================================
-console.log('NoteMaster Landing Page - Scripts Carregados ✅');
+console.log('SimpleForNotes landing page — scripts loaded');
